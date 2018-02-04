@@ -3,11 +3,7 @@ import "package:c3/c3.dart" as c3;
 
 import "package:js/js_util.dart";
 
-main() {
-  displayChart();
-}
-
-displayChart() async {
+main() async {
   await c3.load();
 
   final container = document.querySelector("#chart");

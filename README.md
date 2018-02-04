@@ -1,22 +1,27 @@
-# c3
+A generated Dart API for [C3.js](http://c3js.org/)
+using [pkg/js](https://pub.dartlang.org/packages/js) and
+[dart_js_facade_gen](https://github.com/dart-lang/js_facade_gen).
 
-A library for Dart developers.
+## Example
 
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+```dart
+import "package:c3/c3.dart" as c3;
 
-## Usage
+main() async {
+  await c3.load();
 
-A simple usage example:
+  final container = document.querySelector("#chart");
 
-    import 'package:c3/c3.dart';
+  final data = new c3.Data()
+    ..columns = [
+      ['data1', 30, 200, 100, 400, 150, 250],
+      ['data2', 50, 20, 10, 40, 15, 25]
+    ];
 
-    main() {
-      var awesome = new Awesome();
-    }
+  final configuration = new c3.ChartConfiguration()
+    ..bindto = container
+    ..data = data;
 
-## Features and bugs
-
-Please file feature requests and bugs at the [issue tracker][tracker].
-
-[tracker]: http://example.com/issues/replaceme
+  final chart = c3.generate(configuration);
+}
+```
