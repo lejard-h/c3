@@ -5,6 +5,7 @@ using [pkg/js](https://pub.dartlang.org/packages/js) and
 ## Example
 
 ```dart
+import "dart:html";
 import "package:c3/c3.dart" as c3;
 
 main() async {
