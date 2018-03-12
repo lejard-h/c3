@@ -182,7 +182,7 @@ abstract class ChartConfiguration {
         duration?: number;
     }*/
           v);
-          
+
   external Data get data;
   external set data(Data v);
   external Axis get axis;
@@ -1205,8 +1205,9 @@ abstract class TooltipOptions {
 
   /// Set custom HTML for the tooltip.
   /// Specified function receives data, defaultTitleFormat, defaultValueFormat and color of the data point to show. If tooltip.grouped is true, data includes multiple data points.
-  external String contents(dynamic data, String defaultTitleFormat,
-      String defaultValueFormat, dynamic color);
+  external set contents(dynamic func);
+  /*(dynamic data, String defaultTitleFormat,
+      String defaultValueFormat, dynamic color);*/
 
   /// Set tooltip values order
   /// Available Values: desc, asc, any[], function (data1, data2) { ... }, null

@@ -16,7 +16,14 @@ Future<ScriptElement> loadD3Script() =>
 Future<ScriptElement> loadC3Script() =>
     loadScript("/packages/c3/c3.min.js", isAsync: false, id: "c3-js");
 
-Future<Null> load() async {
+Future<Null> load({bool css: true}) async {
   await loadD3Script();
-  await Future.wait([loadC3Styles(), loadC3Script()]);
+  final futures = <Future>[];
+
+  if (css) {
+    futures.add(loadC3Styles());
+  }
+  futures.add(loadC3Script());
+
+  await Future.wait(futures);
 }
