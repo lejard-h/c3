@@ -908,6 +908,13 @@ abstract class YTickConfiguration {
   /// The position of the ticks will be calculated precisely, so the values on the ticks will not be rounded nicely. In the case, axis.y.tick.format or axis.y.tick.values will be helpful.
   external num get count;
   external set count(num v);
+
+  external factory YTickConfiguration({
+    dynamic /*String|Func1<num|DateTime, String|num>*/ format,
+    bool outer,
+    num count,
+    List<dynamic> /*List<num>|List<String>*/ values,
+  });
 }
 
 @anonymous
