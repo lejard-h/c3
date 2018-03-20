@@ -2,8 +2,7 @@
 library c3;
 
 import "package:js/js.dart";
-import "dart:html" show HtmlElement, Event;
-import "package:func/func.dart";
+import "dart:html" show Event;
 
 /// Type definitions for C3js 0.4
 /// Project: http://c3js.org/
