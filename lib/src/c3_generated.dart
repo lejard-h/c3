@@ -505,6 +505,9 @@ abstract class ChartConfiguration {
 @anonymous
 @JS()
 abstract class Data {
+  external dynamic get unload;
+  external set unload(dynamic val);
+
   /// Load a CSV or JSON file from a URL. Note that this will not work if loading via the "file://" protocol as most browsers with block XMLHTTPRequests.
   external String get url;
   external set url(String v);
