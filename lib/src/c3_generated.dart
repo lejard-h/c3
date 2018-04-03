@@ -27,6 +27,32 @@ abstract class TargetIds {
 @anonymous
 @JS()
 abstract class ChartConfiguration {
+  external factory ChartConfiguration();
+
+  /// Set a callback to execute when the chart is initialized.
+  external Function get oninit;
+  external set oninit(Function v);
+
+  /// Set a callback which is executed when the chart is rendered. Basically, this callback will be called in each time when the chart is redrawed.
+  external Function get onrendered;
+  external set onrendered(Function v);
+
+  /// Set a callback to execute when mouse enters the chart.
+  external Function get onmouseover;
+  external set onmouseover(Function v);
+
+  /// Set a callback to execute when mouse leaves the chart.
+  external Function get onmouseout;
+  external set onmouseout(Function v);
+
+  /// Set a callback to execute when user resizes the screen.
+  external Function get onresize;
+  external set onresize(Function v);
+
+  /// Set a callback to execute when screen resize finished.
+  external Function get onresized;
+  external set onresized(Function v);
+
   /// The CSS selector or the element which the chart will be set to. D3 selection object can be specified. If other chart is set already, it will be replaced with the new one (only one chart
   /// can be set in one element).
   /// If this option is not specified, the chart will be generated but not be set. Instead, we can access the element by chart.element and set it by ourselves.
@@ -657,6 +683,8 @@ abstract class Data {
   external void onmouseout(dynamic d, [dynamic element]);
   external void onselected(dynamic d, [dynamic element]);
   external void onunselected(dynamic d, [dynamic element]);
+
+  external factory Data();
 }
 
 @anonymous
@@ -1223,6 +1251,8 @@ abstract class TooltipOptions {
   external dynamic /*String|List<dynamic>|Func2<dynamic, dynamic, num>|Null*/ get order;
   external set order(
       dynamic /*String|List<dynamic>|Func2<dynamic, dynamic, num>|Null*/ v);
+
+  external factory TooltipOptions();
 }
 
 @anonymous
@@ -1252,6 +1282,8 @@ abstract class SubchartOptions {
   /// Set callback for brush event.
   /// Specified function receives the current zoomed x domain.
   external void onbrush(dynamic domain);
+
+  external factory SubchartOptions();
 }
 
 @anonymous
@@ -1277,6 +1309,8 @@ abstract class ZoomOptions {
 
   /// Set callback that is called when zooming ends. Specified function receives the zoomed domain.
   external void onzoomend(dynamic domain);
+
+  external factory ZoomOptions();
 }
 
 @anonymous

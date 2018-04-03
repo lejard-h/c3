@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.3
+
+- fix dart2js
+
 ## 0.0.2
 
 - some missing api

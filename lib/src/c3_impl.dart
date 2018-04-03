@@ -1,52 +1,7 @@
 @JS()
 library c3_dart.impl;
 
-import 'c3_generated.dart' as c3;
 import 'package:js/js.dart';
-
-@anonymous
-@JS()
-class ChartConfiguration extends c3.ChartConfiguration {
-  /// Set a callback to execute when the chart is initialized.
-  external Function get oninit;
-  external set oninit(Function v);
-
-  /// Set a callback which is executed when the chart is rendered. Basically, this callback will be called in each time when the chart is redrawed.
-  external Function get onrendered;
-  external set onrendered(Function v);
-
-  /// Set a callback to execute when mouse enters the chart.
-  external Function get onmouseover;
-  external set onmouseover(Function v);
-
-  /// Set a callback to execute when mouse leaves the chart.
-  external Function get onmouseout;
-  external set onmouseout(Function v);
-
-  /// Set a callback to execute when user resizes the screen.
-  external Function get onresize;
-  external set onresize(Function v);
-
-  /// Set a callback to execute when screen resize finished.
-  external Function get onresized;
-  external set onresized(Function v);
-}
-
-@anonymous
-@JS()
-class Data extends c3.Data {}
-
-@anonymous
-@JS()
-class TooltipOptions extends c3.TooltipOptions {}
-
-@anonymous
-@JS()
-class SubchartOptions extends c3.SubchartOptions {}
-
-@anonymous
-@JS()
-class ZoomOptions extends c3.ZoomOptions {}
 
 @anonymous
 @JS()
