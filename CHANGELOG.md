@@ -1,12 +1,10 @@
 # Changelog
 
-## 0.0.3
-
-- fix dart2js
-
 ## 0.0.2
 
+- dart 2 stable
 - some missing api
+- fix dart2js
 
 ## 0.0.1
 
