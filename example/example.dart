@@ -4,8 +4,6 @@ import "package:c3/c3.dart" as c3;
 import "package:js/js_util.dart";
 
 main() async {
-  await c3.load();
-
   final container = document.querySelector("#chart");
 
   final data = new c3.Data()
