@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.0-nullsafety.0
+
+- Null safety support
+
 ## 0.1.0
 
 - use last c3 js
