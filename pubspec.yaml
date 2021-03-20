@@ -1,17 +1,17 @@
 name: c3
 description: A starting point for Dart libraries or applications.
-version: 0.2.0-nullsafety.0
+version: 0.2.0
 homepage: https://github.com/lejard-h/c3
-author: Lejard Hadrien <hadrien.lejard@gmail.com>
 
 environment:
-  sdk: ">=2.12.0-0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
-  js: ^0.6.3-nullsafety.0
-  dart_browser_loader: ^0.0.7-nullsafety.0
+  js: ^0.6.3
+  dart_browser_loader: ^0.1.0
 
 dev_dependencies:
-  test: ^1.16.0-nullsafety.0
+  test: ^1.16.0
   build_runner: ^1.10.0
   build_web_compilers: ^2.15.0
+  pedantic: ^1.10.0

@@ -1,8 +1,8 @@
-@JS("c3")
+@JS('c3')
 library c3;
 
-import "package:js/js.dart";
-import "dart:html" show Event;
+import 'package:js/js.dart';
+import 'dart:html' show Event;
 
 /// Type definitions for C3js 0.4
 /// Project: http://c3js.org/
@@ -13,7 +13,7 @@ import "dart:html" show Event;
 /// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 /// TypeScript Version: 2.1
 /*export type PrimitiveArray = Array<string | boolean | number | null>;*/
-typedef void FormatFunction(dynamic v, String id, num i, num j);
+typedef FormatFunction = void Function(dynamic v, String id, num i, num j);
 
 @anonymous
 @JS()
@@ -1470,7 +1470,7 @@ abstract class ChartAPI {
   /// If done given, the specified function will be called after data loded.
   /// NOTE: If you call load API soon after/before unload, unload param of load should be used. Otherwise chart will not be rendered properly because of cancel of animation.
   /// NOTE: done will be called after data loaded, but it's not after rendering. It's because rendering will finish after some transition and there is some time lag between loading and rendering.
-  external dynamic unload([TargetIds targetIds, dynamic done()]);
+  external dynamic unload([TargetIds targetIds, dynamic Function() done]);
 
   /// Flow data to the chart. By this API, you can append new data points to the chart.
   /// If json, rows and columns given, the data will be loaded. If data that has the same target id is given, the chart will be appended. Otherwise, new target will be added. One of these is
